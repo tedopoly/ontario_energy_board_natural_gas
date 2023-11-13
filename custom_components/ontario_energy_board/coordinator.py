@@ -82,7 +82,6 @@ class OntarioEnergyBoardDataUpdateCoordinator(DataUpdateCoordinator):
                 self.federal_carbon_charge = float(company.find(XML_KEY_FEDERAL_CARBON_CHARGE).text)
                 self.transportation_charge = float(company.find(XML_KEY_TRANSPORTATION_CHARGE).text)
                 self.gst = float(company.find(XML_KEY_GST).text)
-            
                 return
 
         self.logger.error("Could not find energy rates for %s", self.energy_company)
