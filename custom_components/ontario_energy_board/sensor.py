@@ -40,6 +40,10 @@ class OntarioEnergyBoardSensor(CoordinatorEntity, SensorEntity):
     def should_poll(self) -> bool:
         return True
 
+    @property
+    def native_value(self) -> float:
+        """Returns the monthly charge."""
+        return getattr(self.coordinator.monthly_charge)
 
     @property
     def extra_state_attributes(self) -> dict:
