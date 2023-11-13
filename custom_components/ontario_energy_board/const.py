@@ -7,7 +7,7 @@ CONF_ENERGY_COMPANY = "energy_company"
 
 RATES_URL = "https://www.oeb.ca/_html/calculator/data/GasBillData.xml"
 
-RATE_UNIT_OF_MEASURE = "CA$/kWh"
+RATE_UNIT_OF_MEASURE = "CA₵/m³"
 
 REFRESH_RATES_INTERVAL = timedelta(days=1)
 SCAN_INTERVAL = timedelta(minutes=1)
