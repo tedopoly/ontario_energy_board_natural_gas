@@ -45,14 +45,14 @@ class OntarioEnergyBoardSensor(CoordinatorEntity, SensorEntity):
     def extra_state_attributes(self) -> dict:
         return {
             "energy_company": self.coordinator.energy_company,
-            "monthly_charge": self.monthly_charge,
-            "gas_supply_charge": self.gas_supply_charge,
-            "gas_supply_charge_price_adjustment": self.gas_supply_charge_price_adjustment,
-            "transportation_charge_price_adjustment": self.transportation_charge_price_adjustment,
-            "delivery_charge_price_adjustment": self.delivery_charge_price_adjustment,
-            "facility_carbon_charge": self.facility_carbon_charge,
-            "federal_carbon_charge": self.federal_carbon_charge,
-            "transportation_charge": self.transportation_charge,
+            "monthly_charge": self.coordinator.monthly_charge,
+            "gas_supply_charge": self.coordinator.gas_supply_charge,
+            "gas_supply_charge_price_adjustment": self.coordinator.gas_supply_charge_price_adjustment,
+            "transportation_charge_price_adjustment": self.coordinator.transportation_charge_price_adjustment,
+            "delivery_charge_price_adjustment": self.coordinator.delivery_charge_price_adjustment,
+            "facility_carbon_charge": self.coordinator.facility_carbon_charge,
+            "federal_carbon_charge": self.coordinator.federal_carbon_charge,
+            "transportation_charge": self.coordinator.transportation_charge,
             "hst": self.coordinator.gst,
 
         }
