@@ -38,7 +38,7 @@ class OntarioEnergyBoardSensor(CoordinatorEntity, SensorEntity):
 
     @property
     def native_value(self) -> float:
-	    self._attr_native_value = {coordinator.monthly_charge}
+	    self._attr_native_value = 23
     
     @property
     def extra_state_attributes(self) -> dict:
