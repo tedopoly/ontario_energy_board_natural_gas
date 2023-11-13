@@ -22,7 +22,7 @@ async def get_energy_companies() -> list[str]:
         "{company_name}".format(
             company_name=company.find("Dist").text,
         )
-        for company in tree.findall(GasBillData")
+        for company in tree.findall("GasBillData")
     ]
     all_companies.sort()
 
