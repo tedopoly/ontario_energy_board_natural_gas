@@ -12,7 +12,7 @@ PLATFORMS = [Platform.SENSOR]
 
 
 async def async_setup_entry(hass, entry: ConfigEntry):
-    """Set up the Ontario Energy Board component."""
+    """Set up the Ontario Energy Board natural gas component."""
     hass.data.setdefault(DOMAIN, {})
     coordinator = OntarioEnergyBoardDataUpdateCoordinator(hass)
     await coordinator.async_config_entry_first_refresh()
