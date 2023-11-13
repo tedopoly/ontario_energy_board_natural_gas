@@ -19,7 +19,7 @@ async def get_energy_companies() -> list[str]:
     tree = ET.fromstring(content)
 
     all_companies = [
-        "{company_name} ({company_class})".format(
+        "{company_name}".format(
             company_name=company.find("Dist").text,
         )
         for company in tree.findall(GasBillData")
