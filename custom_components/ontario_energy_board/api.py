@@ -14,13 +14,8 @@ import holidays
 from homeassistant.util.dt import as_local, now
 
 from .const import (
-    STATE_MID_PEAK,
-    STATE_OFF_PEAK,
-    STATE_ON_PEAK,
     RATES_URL,
-    XML_KEY_OFF_PEAK_RATE,
-    XML_KEY_MID_PEAK_RATE,
-    XML_KEY_ON_PEAK_RATE,
+
 )
 
 
