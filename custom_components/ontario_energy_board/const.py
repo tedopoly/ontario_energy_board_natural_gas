@@ -1,7 +1,7 @@
 """Constants for the Ontario Energy Board integration."""
 from datetime import timedelta
 
-DOMAIN = "ontario_energy_board"
+DOMAIN = "ontario_energy_board_natural_gas"
 
 CONF_ENERGY_COMPANY = "energy_company"
 
