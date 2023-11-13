@@ -1,5 +1,5 @@
 {
-  "domain": "ontario_energy_board_natural_gas",
+  "domain": "ontario_energy_board",
   "name": "Ontario Energy Board Natural Gas",
   "config_flow": true,
   "documentation": "https://github.com/jrfernandes/ontario_energy_board",
