@@ -38,7 +38,7 @@ class OntarioEnergyBoardSensor(CoordinatorEntity, SensorEntity):
 
     @property
     def native_value(self) -> float:
-        """Returns the current peak's rate."""
+        """Returns the gas supply charge."""
         return getattr(self.coordinator, "gas_supply_charge")
     
     @property
