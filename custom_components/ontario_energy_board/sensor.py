@@ -54,5 +54,17 @@ class OntarioEnergyBoardSensor(CoordinatorEntity, SensorEntity):
             "federal_carbon_charge": self.coordinator.federal_carbon_charge,
             "transportation_charge": self.coordinator.transportation_charge,
             "hst": self.coordinator.gst,
+            "delivery_charge_tier_1": self.coordinator.delivery_charge_tier_1,
+            "delivery_charge_tier_2": self.coordinator.delivery_charge_tier_2,
+            "delivery_charge_tier_3": self.coordinator.delivery_charge_tier_3,
+            "delivery_charge_tier_4": self.coordinator.delivery_charge_tier_4,
+            "delivery_tier_1_start": self.coordinator.delivery_tier_1_start,
+            "delivery_tier_1_end": self.coordinator.delivery_tier_1_end,
+            "delivery_tier_2_start": self.coordinator.delivery_tier_2_start,
+            "delivery_tier_2_end": self.coordinator.delivery_tier_2_end,
+            "delivery_tier_3_start": self.coordinator.delivery_tier_3_start,
+            "delivery_tier_3_end": self.coordinator.delivery_tier_3_end,
+            "delivery_tier_4_start": self.coordinator.delivery_tier_4_start,
+            "delivery_tier_4_end": self.coordinator.delivery_tier_4_end,
 
         }
