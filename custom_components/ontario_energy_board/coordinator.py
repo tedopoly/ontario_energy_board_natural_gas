@@ -28,6 +28,14 @@ from .const import (
     XML_KEY_DELIVERY_CHARGE_TIER_2,
     XML_KEY_DELIVERY_CHARGE_TIER_3,
     XML_KEY_DELIVERY_CHARGE_TIER_4,
+    XML_KEY_DELIVERY_TIER_1_START,
+    XML_KEY_DELIVERY_TIER_2_START,
+    XML_KEY_DELIVERY_TIER_3_START,
+    XML_KEY_DELIVERY_TIER_4_START,
+    XML_KEY_DELIVERY_TIER_1_END,
+    XML_KEY_DELIVERY_TIER_2_END,
+    XML_KEY_DELIVERY_TIER_3_END,
+    XML_KEY_DELIVERY_TIER_4_END,
 )
 
 
@@ -51,6 +59,14 @@ class OntarioEnergyBoardDataUpdateCoordinator(DataUpdateCoordinator):
     delivery_charge_tier_2 = None
     delivery_charge_tier_3 = None
     delivery_charge_tier_4 = None
+    delivery_tier_1_start = None
+    delivery_tier_1_end = None
+    delivery_tier_2_start = None
+    delivery_tier_2_end = None
+    delivery_tier_3_start = None
+    delivery_tier_3_end = None
+    delivery_tier_4_start = None
+    delivery_tier_4_end = None
 
 
 
@@ -95,6 +111,14 @@ class OntarioEnergyBoardDataUpdateCoordinator(DataUpdateCoordinator):
                 self.delivery_charge_tier_2 = float(company.find(XML_KEY_XML_KEY_DELIVERY_CHARGE_TIER_2).text)
                 self.delivery_charge_tier_3 = float(company.find(XML_KEY_XML_KEY_DELIVERY_CHARGE_TIER_3).text)
                 self.delivery_charge_tier_4 = float(company.find(XML_KEY_XML_KEY_DELIVERY_CHARGE_TIER_4).text)
+                self.delivery_tier_1_start = float(company.find(XML_KEY_XML_KEY_DELIVERY_TIER_1_START).text)
+                self.delivery_tier_1_end = float(company.find(XML_KEY_XML_KEY_DELIVERY_TIER_1_END).text)
+                self.delivery_tier_2_start = float(company.find(XML_KEY_XML_KEY_DELIVERY_TIER_2_START).text)
+                self.delivery_tier_2_end = float(company.find(XML_KEY_XML_KEY_DELIVERY_TIER_2_END).text)
+                self.delivery_tier_3_start = float(company.find(XML_KEY_XML_KEY_DELIVERY_TIER_3_START).text)
+                self.delivery_tier_3_end = float(company.find(XML_KEY_XML_KEY_DELIVERY_TIER_3_END).text)
+                self.delivery_tier_4_start = float(company.find(XML_KEY_XML_KEY_DELIVERY_TIER_4_START).text)
+                self.delivery_tier_4_end = float(company.find(XML_KEY_XML_KEY_DELIVERY_TIER_4_END).text)
                 return
 
         self.logger.error("Could not find energy rates for %s", self.energy_company)
