@@ -47,6 +47,11 @@ class OntarioEnergyBoardDataUpdateCoordinator(DataUpdateCoordinator):
     federal_carbon_charge = None
     transportation_charge = None
     gst = None
+    delivery_charge_tier_1 = None
+    delivery_charge_tier_2 = None
+    delivery_charge_tier_3 = None
+    delivery_charge_tier_4 = None
+
 
 
     def __init__(self, hass: HomeAssistant) -> None:
@@ -86,6 +91,10 @@ class OntarioEnergyBoardDataUpdateCoordinator(DataUpdateCoordinator):
                 self.federal_carbon_charge = float(company.find(XML_KEY_FEDERAL_CARBON_CHARGE).text)
                 self.transportation_charge = float(company.find(XML_KEY_TRANSPORTATION_CHARGE).text)
                 self.gst = float(company.find(XML_KEY_GST).text)
+                self.delivery_charge_tier_1 = float(company.find(XML_KEY_XML_KEY_DELIVERY_CHARGE_TIER_1).text)
+                self.delivery_charge_tier_2 = float(company.find(XML_KEY_XML_KEY_DELIVERY_CHARGE_TIER_2).text)
+                self.delivery_charge_tier_3 = float(company.find(XML_KEY_XML_KEY_DELIVERY_CHARGE_TIER_3).text)
+                self.delivery_charge_tier_4 = float(company.find(XML_KEY_XML_KEY_DELIVERY_CHARGE_TIER_4).text)
                 return
 
         self.logger.error("Could not find energy rates for %s", self.energy_company)
